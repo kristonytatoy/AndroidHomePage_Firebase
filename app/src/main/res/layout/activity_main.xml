@@ -1,0 +1,545 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    android:fillViewport="true"
+    android:scrollbars="none">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="245dp"
+            android:paddingStart="22dp"
+            android:paddingTop="25dp"
+            android:paddingEnd="22dp">
+
+            <Button
+                android:id="@+id/superButton"
+                android:layout_width="65dp"
+                android:layout_height="55dp"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="☰"
+                android:textColor="#111111"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/notificationButton"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_alignParentEnd="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:text="🔔"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/welcome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="50dp"
+                android:fontFamily="serif"
+                android:text="Welcome"
+                android:textColor="#084B82"
+                android:textSize="29sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/together"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/welcome"
+                android:fontFamily="serif"
+                android:text="TOGETHER"
+                android:textColor="#AE2434"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/weGrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/together"
+                android:fontFamily="serif"
+                android:text="WE GROW"
+                android:textColor="#5C9828"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <!-- MESSAGE CARD WITH COMMUNITY LOGO -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="500dp">
+
+            <View
+                android:layout_width="330dp"
+                android:layout_height="430dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/blue_outline" />
+
+            <FrameLayout
+                android:id="@+id/messageCard"
+                android:layout_width="300dp"
+                android:layout_height="365dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/message_background"
+                android:elevation="3dp">
+
+                <!-- FADED LOGO BACKGROUND -->
+                <ImageView
+                    android:id="@+id/fadedLogo"
+                    android:layout_width="190dp"
+                    android:layout_height="230dp"
+                    android:layout_gravity="center"
+                    android:alpha="0.18"
+                    android:contentDescription="Community logo"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo" />
+
+                <!-- MESSAGE TEXT -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="32dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Different stories. One purpose.\nTogether, we grow."
+                        android:textColor="#A92535"
+                        android:textSize="29sp"
+                        android:textStyle="bold"
+                        android:fontFamily="serif" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginTop="28dp"
+                        android:layout_marginBottom="28dp"
+                        android:background="#719B2D" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:fontFamily="serif"
+                        android:lineSpacingExtra="5dp"
+                        android:text="Different hearts, different stories, but one community, one voice, and one purpose."
+                        android:textColor="#222222"
+                        android:textSize="14sp" />
+
+                </LinearLayout>
+
+            </FrameLayout>
+
+        </RelativeLayout>
+
+        <!-- JOIN NOW -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:text="Join Now"
+                android:textColor="#111111"
+                android:textSize="22sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/viewAllButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@android:color/transparent"
+                android:text="View All"
+                android:textColor="#367E18"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <!-- JOIN NOW CARDS -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="315dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:paddingStart="35dp"
+                android:paddingEnd="20dp">
+
+                <!-- VOLUNTEER -->
+                <LinearLayout
+                    android:layout_width="205dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/card_white"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:text="🤝"
+                        android:textColor="#3F8C15"
+                        android:textSize="76sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="VOLUNTEER"
+                        android:textColor="#3F8C15"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Be the reason\nsomeone smiles"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="13dp"
+                        android:background="#62A329" />
+
+                </LinearLayout>
+
+                <!-- DIVERSITY -->
+                <LinearLayout
+                    android:layout_width="205dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/card_white"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:text="🧑‍🤝‍🧑"
+                        android:textColor="#B32132"
+                        android:textSize="76sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="DIVERSITY"
+                        android:textColor="#B32132"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Our differences make\nour community stronger\nand more meaningful."
+                        android:textColor="#222222"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#B32132" />
+
+                </LinearLayout>
+
+                <!-- ABOUT US -->
+                <LinearLayout
+                    android:layout_width="205dp"
+                    android:layout_height="300dp"
+                    android:layout_marginEnd="12dp"
+                    android:background="@drawable/card_white"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:text="ℹ️"
+                        android:textColor="#A6D8F7"
+                        android:textSize="76sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="ABOUT US"
+                        android:textColor="#A6D8F7"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="Different people,\ndifferent strengths,\none shared goal."
+                        android:textColor="#222222"
+                        android:textSize="14sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="10dp"
+                        android:background="#A6D8F7" />
+
+                </LinearLayout>
+
+                <!-- EVENTS -->
+                <LinearLayout
+                    android:layout_width="205dp"
+                    android:layout_height="300dp"
+                    android:background="@drawable/card_white"
+                    android:elevation="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:gravity="center"
+                        android:text="📅"
+                        android:textColor="#F2B322"
+                        android:textSize="70sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="EVENTS"
+                        android:textColor="#F2B322"
+                        android:textSize="21sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:text="See what's\nhappening"
+                        android:textColor="#222222"
+                        android:textSize="16sp" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="22dp"
+                        android:layout_marginTop="13dp"
+                        android:background="#F2B322" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <!-- UPCOMING EVENTS HEADER -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="65dp"
+            android:paddingStart="35dp"
+            android:paddingEnd="35dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="☷  Upcoming Events"
+                android:textColor="#65A329"
+                android:textSize="21sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:text="View All"
+                android:textColor="#65A329"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <!-- EVENT CARD -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="125dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/event_card"
+            android:elevation="4dp"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Community Service"
+                android:textColor="#FFFFFF"
+                android:textSize="23sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="September 5, 2026\n8:00 AM\nTalomo, Coastal"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
+
+        </LinearLayout>
+
+        <!-- BOTTOM NAVIGATION -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bottom_nav"
+            android:elevation="8dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <!-- HOME -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🏠"
+                    android:textColor="#999999"
+                    android:textSize="43sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:textColor="#222222"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- ACTIVITIES -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋"
+                    android:textColor="#999999"
+                    android:textSize="39sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Activities"
+                    android:textColor="#222222"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- DONATE -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="♥"
+                    android:textColor="#999999"
+                    android:textSize="35sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Donate"
+                    android:textColor="#222222"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <!-- PROFILE -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="👤"
+                    android:textColor="#999999"
+                    android:textSize="38sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Profile"
+                    android:textColor="#222222"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
